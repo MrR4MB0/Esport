@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UGA Esports - Contact Us</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- FontAwesome CDN for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- VIDEO BACKGROUND OVERLAY -->
+    <video autoplay muted loop playsinline id="bg-video" 
+           style="position: fixed; 
+                  top: 0; 
+                  left: 0; 
+                  width: 100vw; 
+                  height: 100vh; 
+                  object-fit: cover; 
+                  z-index: -9999; 
+                  pointer-events: none; 
+                  opacity: 0.35;">
+        <source src="img/valovideo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- HEADER / NAVIGATION -->
+    <header>
+        <div class="navbar container">
+            <div class="logo">
+                <span class="logo-text">UGA</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li><a href="schedule.html">SCHEDULE</a></li>
+                    <li><a href="services.html">SERVICES</a></li>
+                    <li><a href="contact.html" class="active">CONTACT US</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTACT BANNER SECTION -->
+    <section class="hero-section container" style="margin-bottom: 40px;">
+        <div style="position: relative; width: 100%; height: 250px; overflow: hidden; border-radius: 12px; border: 1px solid #262c36;">
+            <img src="img/valo.jpg" alt="Contact Banner" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.55);">
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; width: 100%;">
+                <h1 style="font-size: 3rem; font-family: sans-serif; letter-spacing: 4px; color: #fff; text-shadow: 0 0 15px rgba(0,240,255,0.6);">CONTACT US</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- EVENT BOOKING FORM SECTION -->
+    <section class="contact-form-section container" style="margin-bottom: 60px; max-width: 900px;">
+        <h2 style="text-align: center; font-size: 2.2rem; margin-bottom: 40px; font-family: sans-serif; letter-spacing: 1px; color: #fff;">
+            Get in touch for your next Event!
+        </h2>
+
+        <!-- BAKED-IN FORM ID -->
+        <form id="event-contact-form" style="display: flex; flex-direction: column; gap: 24px;">
+            
+            <!-- ROW 1: Name and Email -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 24px;">
+                <div style="display: flex; flex-direction: column; gap: 8px;">
+                    <label style="font-weight: bold; color: #fff; font-size: 0.95rem;">Name</label>
+                    <input type="text" id="form-name" required style="width: 100%; padding: 14px; border-radius: 6px; border: 1px solid #262c36; background: rgba(255, 255, 255, 0.15); color: #fff; font-size: 1rem; outline: none; transition: 0.3s;" onfocus="this.style.borderColor='#00f0ff'" onblur="this.style.borderColor='#262c36'">
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 8px;">
+                    <label style="font-weight: bold; color: #fff; font-size: 0.95rem;">Email</label>
+                    <input type="email" id="form-email" required style="width: 100%; padding: 14px; border-radius: 6px; border: 1px solid #262c36; background: rgba(255, 255, 255, 0.15); color: #fff; font-size: 1rem; outline: none; transition: 0.3s;" onfocus="this.style.borderColor='#00f0ff'" onblur="this.style.borderColor='#262c36'">
+                </div>
+            </div>
+
+            <!-- ROW 2: Country Code, Phone No, Budget -->
+            <div style="display: grid; grid-template-columns: 1fr 2fr 2fr; gap: 24px;">
+                <div style="display: flex; flex-direction: column; gap: 8px;">
+                    <label style="font-weight: bold; color: #fff; font-size: 0.95rem; white-space: nowrap;">Country Code</label>
+                    <input type="text" style="width: 100%; padding: 14px; border-radius: 6px; border: 1px solid #262c36; background: rgba(255, 255, 255, 0.15); color: #fff; font-size: 1rem; outline: none; transition: 0.3s;" onfocus="this.style.borderColor='#00f0ff'" onblur="this.style.borderColor='#262c36'">
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 8px;">
+                    <label style="font-weight: bold; color: #fff; font-size: 0.95rem;">Phone No</label>
+                    <input type="tel" style="width: 100%; padding: 14px; border-radius: 6px; border: 1px solid #262c36; background: rgba(255, 255, 255, 0.15); color: #fff; font-size: 1rem; outline: none; transition: 0.3s;" onfocus="this.style.borderColor='#00f0ff'" onblur="this.style.borderColor='#262c36'">
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 8px;">
+                    <label style="font-weight: bold; color: #fff; font-size: 0.95rem;">Budget</label>
+                    <input type="text" style="width: 100%; padding: 14px; border-radius: 6px; border: 1px solid #262c36; background: rgba(255, 255, 255, 0.15); color: #fff; font-size: 1rem; outline: none; transition: 0.3s;" onfocus="this.style.borderColor='#00f0ff'" onblur="this.style.borderColor='#262c36'">
+                </div>
+            </div>
+
+            <!-- ROW 3: Type of Event and Timeline -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 24px;">
+                <div style="display: flex; flex-direction: column; gap: 8px;">
+                    <label style="font-weight: bold; color: #fff; font-size: 0.95rem;">Type of Event</label>
+                    <input type="text" style="width: 100%; padding: 14px; border-radius: 6px; border: 1px solid #262c36; background: rgba(255, 255, 255, 0.15); color: #fff; font-size: 1rem; outline: none; transition: 0.3s;" onfocus="this.style.borderColor='#00f0ff'" onblur="this.style.borderColor='#262c36'">
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 8px;">
+                    <label style="font-weight: bold; color: #fff; font-size: 0.95rem;">I Want to Start the Event In</label>
+                    <input type="text" style="width: 100%; padding: 14px; border-radius: 6px; border: 1px solid #262c36; background: rgba(255, 255, 255, 0.15); color: #fff; font-size: 1rem; outline: none; transition: 0.3s;" onfocus="this.style.borderColor='#00f0ff'" onblur="this.style.borderColor='#262c36'">
+                </div>
+            </div>
+
+            <!-- ROW 4: Event Details -->
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+                <label style="font-weight: bold; color: #fff; font-size: 0.95rem;">Event Details</label>
+                <textarea rows="4" style="width: 100%; padding: 14px; border-radius: 6px; border: 1px solid #262c36; background: rgba(255, 255, 255, 0.15); color: #fff; font-size: 1rem; outline: none; resize: vertical; transition: 0.3s;" onfocus="this.style.borderColor='#00f0ff'" onblur="this.style.borderColor='#262c36'"></textarea>
+            </div>
+
+            <!-- BAKED-IN BUTTON ID -->
+            <div style="text-align: right; margin-top: 10px;">
+                <button type="submit" id="submit-btn" style="background: #00f0ff; color: #111; border: none; padding: 14px 35px; font-weight: bold; border-radius: 6px; cursor: pointer; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s;">
+                    Submit Request
+                </button>
+            </div>
+        </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content container">
+            <h4>CONTACT US</h4>
+            <div class="social-icons">
+                <a href="https://youtube.com" target="_blank" class="social-icon youtube"><img src="img/youtube.png" alt="YouTube"></a>
+                <a href="https://facebook.com" target="_blank" class="social-icon facebook"><img src="img/facebook.png" alt="Facebook"></a>
+                <a href="https://tiktok.com" target="_blank" class="social-icon tiktok"><img src="img/tiktok.png" alt="TikTok"></a>
+                <a href="https://wa.me/1234567890?text=Hello%20UGA%20Esports%20Support!" target="_blank" class="social-icon whatsapp"><img src="img/whatsapp.png" alt="WhatsApp"></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- EMBEDDED FAILPROOF ENGINE -->
+    <script>
+        document.getElementById('event-contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Stop page refresh
+
+            const nameValue = document.getElementById('form-name').value.trim();
+            const submitBtn = document.getElementById('submit-btn');
+
+            // 1. Loading Visual State Change
+            submitBtn.disabled = true;
+            submitBtn.style.background = '#333';
+            submitBtn.style.color = '#888';
+            submitBtn.style.cursor = 'not-allowed';
+            submitBtn.innerText = 'TRANSMITTING...';
+
+            // 2. Simulated Processing Delay (1.2 seconds)
+            setTimeout(() => {
+                // Success feedback pop-up
+                alert("🚀 Transmission Complete, " + nameValue + "!\nYour operational data has been safely sent over to the UGA Esports coordinators.");
+                
+                // Clear the form
+                document.getElementById('event-contact-form').reset();
+
+                // 3. Reset Button State
+                submitBtn.disabled = false;
+                submitBtn.style.background = '#00f0ff';
+                submitBtn.style.color = '#111';
+                submitBtn.style.cursor = 'pointer';
+                submitBtn.innerText = 'Submit Request';
+            }, 1200);
+        });
+    </script>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

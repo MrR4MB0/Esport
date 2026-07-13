@@ -1,0 +1,568 @@
+/* --- RESET & BASIC STYLES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+:root {
+    --bg-dark: #0d0f14;
+    --bg-card: #161920;
+    --neon-blue: #00f0ff;
+    --neon-purple: #7000ff;
+    --text-main: #ffffff;
+    --text-muted: #8b949e;
+    --accent-gradient: linear-gradient(135deg, var(--neon-blue), var(--neon-purple));
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- HEADER / NAVBAR --- */
+header {
+    background: rgba(22, 25, 32, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid var(--neon-blue);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo-text {
+    font-size: 1.8rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: var(--neon-blue);
+    text-shadow: 0 0 8px var(--neon-blue);
+}
+
+/* --- HERO SLIDER & ABOUT CONTAINER FIT --- */
+.hero-section, .about-section {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.main-slider-container, .about-hero-container {
+    border: 3px solid var(--neon-blue);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);
+    width: 100%;
+}
+
+/* Ensures the banner image fits beautifully inside the container frame */
+.main-slider img, .about-banner-poster, .about-poster-img {
+    width: 100%;
+    height: auto;
+    max-height: 480px;
+    object-fit: cover;
+    display: block;
+}
+
+.slider-thumbnails {
+    display: flex;
+    background: var(--bg-card);
+    padding: 15px;
+    gap: 12px;
+    justify-content: center;
+    overflow-x: auto;
+}
+
+.slider-thumbnails img {
+    width: 75px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.slider-thumbnails img:hover, .slider-thumbnails img.active {
+    border-color: var(--neon-blue);
+    transform: scale(1.05);
+    box-shadow: 0 0 8px var(--neon-blue);
+}
+
+/* --- ABOUT DESCRIPTION EDIT (SPACING EXTENSION) --- */
+.about-description-box {
+    margin-top: 40px;
+    padding: 10px 5px;
+}
+
+.about-description-box h1.poster-main-title {
+    font-size: 2.6rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.about-description-box .poster-badge {
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+    display: inline-block;
+}
+
+.about-description-box .poster-subtitle {
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.about-description-box .poster-details {
+    margin-bottom: 40px;
+}
+
+.about-description-box .poster-details span {
+    margin-right: 25px;
+    letter-spacing: 1px;
+}
+
+.description-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 22px;
+    letter-spacing: 1.5px;
+}
+
+.description-text {
+    font-size: 1.05rem;
+    line-height: 2.0;       /* Expanded spaces vertically between rows */
+    letter-spacing: 0.8px;   /* Added breathing space between individual letters */
+    margin-bottom: 28px;     /* Increased block separation space between paragraphs */
+}
+
+/* --- SECTION GENERAL --- */
+.section-title {
+    text-align: center;
+    font-size: 1.7rem;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    font-weight: 800;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--accent-gradient);
+    margin: 8px auto 0 auto;
+    border-radius: 2px;
+}
+
+/* --- GAMES LIST --- */
+.games-section {
+    margin-bottom: 60px;
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.game-card {
+    background: var(--bg-card);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #262c36;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(112, 0, 255, 0.2);
+    border-color: var(--neon-purple);
+}
+
+.game-img-wrapper img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.game-card-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.game-card-content p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-bottom: 20px;
+    height: 90px;
+    overflow: hidden;
+}
+
+.btn-matches {
+    background: var(--accent-gradient);
+    color: #fff;
+    border: none;
+    padding: 10px 30px;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: opacity 0.3s, box-shadow 0.3s;
+}
+
+.btn-matches:hover {
+    box-shadow: 0 0 15px var(--neon-purple);
+    opacity: 0.9;
+}
+
+/* --- PLAYERS SECTION --- */
+.players-section {
+    margin-bottom: 60px;
+}
+
+.players-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.game-heading {
+    border-bottom: 2px solid #262c36;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.player-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.player-row {
+    display: flex;
+    align-items: center;
+    background: var(--bg-card);
+    padding: 15px;
+    border-radius: 12px;
+    border-left: 4px solid var(--neon-blue);
+}
+
+.rank {
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-right: 15px;
+    color: var(--neon-blue);
+}
+
+.avatar {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 2px solid #262c36;
+}
+
+.player-info h4 {
+    font-size: 1rem;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.icon-accent {
+    color: var(--neon-blue);
+    font-size: 0.85rem;
+}
+
+.player-info p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.3;
+}
+
+/* --- REVIEWS SECTION --- */
+.review-section {
+    margin-bottom: 60px;
+}
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    gap: 20px;
+}
+
+.reviews-wrapper {
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+    width: 100%;
+    justify-content: center;
+}
+
+.review-card {
+    background: var(--bg-card);
+    border-radius: 16px;
+    padding: 20px;
+    width: 32%;
+    border: 1px solid #262c36;
+    opacity: 0.5;
+    transform: scale(0.95);
+    transition: all 0.3s;
+}
+
+.review-card.active-card {
+    opacity: 1;
+    transform: scale(1);
+    border-color: var(--neon-blue);
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.15);
+}
+
+.review-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.review-text {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-style: italic;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    height: 60px;
+    overflow: hidden;
+}
+
+.reviewer-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.user-placeholder {
+    width: 35px;
+    height: 35px;
+    background: #262c36;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+}
+
+.reviewer-info h5 {
+    font-size: 0.9rem;
+}
+
+.reviewer-info span {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.carousel-btn {
+    background: var(--accent-gradient);
+    border: none;
+    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 10;
+}
+
+/* --- FOOTER --- */
+footer {
+    background: #07080b;
+    border-top: 1px solid #161920;
+    padding: 40px 0;
+    text-align: center;
+}
+
+footer h4 {
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #161920;
+    color: white;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: all 0.3s;
+    overflow: hidden;
+}
+
+.social-icon.youtube:hover { background: #ff0000; box-shadow: 0 0 12px #ff0000; }
+.social-icon.facebook:hover { background: #1877f2; box-shadow: 0 0 12px #1877f2; }
+.social-icon.tiktok:hover { background: #010101; border: 1px solid var(--neon-blue); box-shadow: 0 0 12px var(--neon-blue); }
+.social-icon.whatsapp:hover { background: #25d366; box-shadow: 0 0 12px #25d366; }
+
+.social-icon img,
+.social-icon svg,
+.social-icon i {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    max-width: 24px;
+    max-height: 24px;
+    display: block;
+}
+
+/* Responsive adjustments */
+@media(max-width: 768px) {
+    nav ul { display: none; }
+    .reviews-wrapper .review-card:not(.active-card) { display: none; }
+    .review-card { width: 100%; }
+}
+/* --- SCHEDULE SPECIFIC LAYOUT ELEMENTS --- */
+.schedule-section {
+    margin-top: 35px;
+    margin-bottom: 70px;
+}
+
+/* Large framed container wrapping all rows */
+.schedule-container-box {
+    background: var(--bg-card);
+    border: 1px solid #262c36;
+    border-radius: 24px;
+    padding: 35px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Uniform spacious vertical gaps between every match */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Row wrapper containing Team 1 - VS - Team 2 */
+.match-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Individual team dark card items */
+.team-card {
+    background: #0d0f14; /* Uses the pure dark background fill for columns */
+    border: 1px solid #1f242e;
+    border-radius: 14px;
+    width: 44%;          /* Takes up clean proportional horizontal room */
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+    transition: all 0.3s ease;
+}
+
+.team-name {
+    color: var(--text-main);
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 1.5px; /* Spacious font format */
+}
+
+/* Center VS Separator element styling */
+.vs-divider {
+    width: 8%;
+    text-align: center;
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+}
+
+
+
+/* Simple responsiveness fix for small mobile widths */
+@media (max-width: 768px) {
+    .match-row {
+        flex-direction: column;
+        gap: 8px;
+        background: #11141a;
+        padding: 15px;
+        border-radius: 16px;
+    }
+    .team-card {
+        width: 100%;
+        justify-content: center;
+    }
+    .vs-divider {
+        width: 100%;
+        margin: 4px 0;
+    }
+}
+
+/* --- ANIMATED VIDEO BACKGROUND FIXED OVERLAY --- */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /* Prevents the video from stretching out of aspect ratio */
+    z-index: -1;       /* Keeps the video behind all cards, text, and buttons */
+    pointer-events: none; /* Allows user clicks to pass right through to buttons */
+    background-color: #0d0f14; /* Fallback color while the video loads */
+    opacity: 0.4;      /* Slightly dims the video so your white text stays perfectly readable */
+}

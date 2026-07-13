@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule - UGA Esports</title>
+    <link rel="stylesheet" href="css/schedule.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+	
+<!-- Force fixed background behavior directly inline -->
+<video autoplay muted loop playsinline id="bg-video" 
+       style="position: fixed; 
+              top: 0; 
+              left: 0; 
+              width: 100vw; 
+              height: 100vh; 
+              object-fit: cover; 
+              z-index: -9999; 
+              pointer-events: none; 
+              opacity: 0.35;">
+    <source src="img/valovideo.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+    <!-- HEADER / NAVIGATION -->
+    <header>
+        <div class="navbar container">
+            <div class="logo">
+                <span class="logo-text">UGA</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li><a href="schedule.html" class="active">SCHEDULE</a></li>
+                    <li><a href="services.html">SERVICES</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- SCHEDULE MAIN CONTENT -->
+    <main class="schedule-section container">
+        <h2 class="section-title">SCHEDULE</h2>
+        
+        <!-- Tournament Matches Container Grid -->
+        <div class="schedule-container-box">
+            
+            <!-- Match 1 -->
+            <div class="match-row">
+                <div class="team-card">
+                    <span class="team-name">SENTINALS (VALORANT)</span>
+                </div>
+                <div class="vs-divider">VS</div>
+                <div class="team-card">
+                    <span class="team-name">PAPER REX (VALORANT)</span>
+                </div>
+            </div>
+
+            <!-- Match 2 -->
+            <div class="match-row">
+                <div class="team-card">
+                    <span class="team-name">ZIQZILLA (TEKKEN 8)</span>
+                </div>
+                <div class="vs-divider">VS</div>
+                <div class="team-card">
+                    <span class="team-name">ULSAN (TEKKEN 8)</span>
+                </div>
+            </div>
+
+            <!-- Match 3 (Highlighted matching the blue outline in your image mockup) -->
+            <div class="match-row active-match">
+                <div class="team-card highlighted-team">
+                    <span class="team-name">COZONS2 (FC 26)</span>
+                </div>
+                <div class="vs-divider highlighted-vs">VS</div>
+                <div class="team-card">
+                    <span class="team-name">TEKKZ (FC 26)</span>
+                </div>
+            </div>
+
+            <!-- Match 4 -->
+            <div class="match-row">
+                <div class="team-card">
+                    <span class="team-name">TEAM VITALITY (VALORANT)</span>
+                </div>
+                <div class="vs-divider">VS</div>
+                <div class="team-card">
+                    <span class="team-name">SENTINALS (VALORANT)</span>
+                </div>
+            </div>
+
+            <!-- Match 5 -->
+            <div class="match-row">
+                <div class="team-card">
+                    <span class="team-name">R4MBO (TEKKEN 8)</span>
+                </div>
+                <div class="vs-divider">VS</div>
+                <div class="team-card">
+                    <span class="team-name">ZIQZILLA (TEKKEN 8)</span>
+                </div>
+            </div>
+
+            <!-- Match 6 -->
+            <div class="match-row">
+                <div class="team-card">
+                    <span class="team-name">TEKKZ (FC 26)</span>
+                </div>
+                <div class="vs-divider">VS</div>
+                <div class="team-card">
+                    <span class="team-name">LEVI DE WEERD (FC 26)</span>
+                </div>
+            </div>
+
+            <!-- Match 7 -->
+            <div class="match-row">
+                <div class="team-card">
+                    <span class="team-name">R4MBO (TEKKEN 8)</span>
+                </div>
+                <div class="vs-divider">VS</div>
+                <div class="team-card">
+                    <span class="team-name">ULSAN (TEKKEN 8)</span>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+     <footer>
+        <div class="footer-content container">
+            <h4>CONTACT US</h4>
+            <div class="social-icons">
+                <a href="https://youtube.com" target="_blank" class="social-icon youtube"><img src="img/youtube.png" alt="YouTube"></a>
+                <a href="https://facebook.com" target="_blank" class="social-icon facebook"><img src="img/facebook.png" alt="Facebook"></a>
+                <a href="https://tiktok.com" target="_blank" class="social-icon tiktok"><img src="img/tiktok.png" alt="TikTok"></a>
+                <!-- INTERACTIVE WHATSAPP INTEGRATION LINK -->
+                <a href="https://wa.me/1234567890?text=Hello%20UGA%20Esports!" target="_blank" class="social-icon whatsapp"><img src="img/whatsapp.png" alt="WhatsApp"></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

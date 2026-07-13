@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UGA Esports</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- FIXED: Added FontAwesome CDN so icons can render cleanly -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Force fixed background behavior directly inline -->
+<video autoplay muted loop playsinline id="bg-video" 
+       style="position: fixed; 
+              top: 0; 
+              left: 0; 
+              width: 100vw; 
+              height: 100vh; 
+              object-fit: cover; 
+              z-index: -9999; 
+              pointer-events: none; 
+              opacity: 0.35;">
+    <source src="img/tekken8video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+	
+    <!-- HEADER / NAVIGATION -->
+    <header>
+        <div class="navbar container">
+            <div class="logo">
+                <span class="logo-text">UGA</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">HOME</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li><a href="schedule.html">SCHEDULE</a></li>
+                    <li><a href="services.html">SERVICES</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO / BANNER SLIDER -->
+    <section class="hero-section container">
+        <div class="main-slider-container">
+            <div class="main-slider">
+                <img src="img/tekken82.png" alt="Esports Tournament" id="featured-img">
+            </div>
+            <div class="slider-thumbnails">
+                <img src="img/tekken82.png" class="thumb active" onclick="changeSlide(this)">
+                <img src="img/fc 262.jpg" class="thumb" onclick="changeSlide(this)">
+                <img src="img/valo2.jpg" class="thumb" onclick="changeSlide(this)">
+                <img src="img/valo3.jpg" class="thumb" onclick="changeSlide(this)">
+                <img src="img/fc264.jpg" class="thumb" onclick="changeSlide(this)">
+            </div>
+        </div>
+    </section>
+
+    <!-- UNIQUE NEW INTERACTIVE PANEL: LIVE TOURNAMENT METRICS (HOVER TO GLOW) -->
+    <section class="metrics-panel container" style="margin-bottom: 50px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; text-align: center;">
+        <div class="metric-card" style="background: var(--bg-card, #161920); padding: 25px; border-radius: 12px; border: 1px solid #262c36; transition: 0.3s;" onmouseenter="this.style.borderColor='var(--neon-blue)'" onmouseleave="this.style.borderColor='#262c36'">
+            <i class="fa-solid fa-trophy" style="font-size: 2rem; color: var(--neon-blue); margin-bottom: 10px;"></i>
+            <h3 style="font-size: 1.8rem; margin-bottom: 5px;">12+</h3>
+            <p style="color: var(--text-muted); font-size: 0.85rem;">ACTIVE TOURNAMENTS</p>
+        </div>
+        <div class="metric-card" style="background: var(--bg-card, #161920); padding: 25px; border-radius: 12px; border: 1px solid #262c36; transition: 0.3s;" onmouseenter="this.style.borderColor='var(--neon-purple)'" onmouseleave="this.style.borderColor='#262c36'">
+            <i class="fa-solid fa-gamepad" style="font-size: 2rem; color: var(--neon-purple); margin-bottom: 10px;"></i>
+            <h3 style="font-size: 1.8rem; margin-bottom: 5px;">4,500+</h3>
+            <p style="color: var(--text-muted); font-size: 0.85rem;">MATCHES PLAYED</p>
+        </div>
+        <div class="metric-card" style="background: var(--bg-card, #161920); padding: 25px; border-radius: 12px; border: 1px solid #262c36; transition: 0.3s;" onmouseenter="this.style.borderColor='var(--neon-blue)'" onmouseleave="this.style.borderColor='#262c36'">
+            <i class="fa-solid fa-users" style="font-size: 2rem; color: var(--neon-blue); margin-bottom: 10px;"></i>
+            <h3 style="font-size: 1.8rem; margin-bottom: 5px;">350K</h3>
+            <p style="color: var(--text-muted); font-size: 0.85rem;">GLOBAL READERS</p>
+        </div>
+    </section>
+
+    <!-- LIST OF GAMES -->
+    <section class="games-section container">
+        <h2 class="section-title">LIST OF THE GAMES</h2>
+        <div class="games-grid">
+            <div class="game-card">
+                <div class="game-img-wrapper">
+                    <img src="img/valo.jpg" alt="Valorant">
+                </div>
+                <div class="game-card-content">
+                    <p>5v5 tactical first-person shooter (FPS) developed by Riot Games. It blends precise gunplay with character-based abilities...</p>
+                    <button class="btn-matches" onclick="window.location.href='schedule.html'">MATCHES</button>
+                </div>
+            </div>
+            <div class="game-card">
+                <div class="game-img-wrapper">
+                    <img src="img/tekken8.png" alt="Tekken 8">
+                </div>
+                <div class="game-card-content">
+                    <p>A 3D, fast-paced fighting system focusing on limb-specific attacks, movement (sidestepping), and heavy counter-based damage.</p>
+                    <button class="btn-matches" onclick="window.location.href='schedule.html'">MATCHES</button>
+                </div>
+            </div>
+            <div class="game-card">
+                <div class="game-img-wrapper">
+                    <img src="img/fc26.jpg" alt="FC 26">
+                </div>
+                <div class="game-card-content">
+                    <p>The annual football simulation game featuring upgraded gameplay mechanics, including more realistic goalkeeper AI.</p>
+                    <button class="btn-matches" onclick="window.location.href='schedule.html'">MATCHES</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIST OF PLAYERS -->
+    <section class="players-section container">
+        <h2 class="section-title">LIST OF THE PLAYERS</h2>
+        <div class="players-columns">
+            <div class="player-column">
+                <h3 class="game-heading">VALORANT</h3>
+                <div class="player-list">
+                    <div class="player-row"><span class="rank">1.</span><img src="img/wan.png" class="avatar"><div class="player-info"><h4>WXNDSH <i class="fa-solid fa-star icon-accent"></i></h4><p>A-tier "VALORANT CHAMPIONS" winner</p></div></div>
+                    <div class="player-row"><span class="rank">2.</span><img src="img/tenz.jpg" class="avatar"><div class="player-info"><h4>TenZ <i class="fa-solid fa-fire icon-accent"></i></h4><p>Two international VCT Masters titles.</p></div></div>
+                    <div class="player-row"><span class="rank">3.</span><img src="img/Chronicle.webp" class="avatar"><div class="player-info"><h4>Chronicle <i class="fa-solid fa-trophy icon-accent"></i></h4><p>Three international VCT trophies.</p></div></div>
+                </div>
+            </div>
+            <div class="player-column">
+                <h3 class="game-heading">TEKKEN 8</h3>
+                <div class="player-list">
+                    <div class="player-row"><span class="rank">1.</span><img src="img/ziqzilla.png"  class="avatar"><div class="player-info"><h4>ZIQZILLA <i class="fa-solid fa-crown icon-accent"></i></h4><p>Two-time Esports World Cup (EWC) champion.</p></div></div>
+                    <div class="player-row"><span class="rank">2.</span><img src="img/ulsan.png" class="avatar"><div class="player-info"><h4>ULSAN <i class="fa-solid fa-shield icon-accent"></i></h4><p>Won the 2024 and 2025 editions for Tekken 8.</p></div></div>
+                    <div class="player-row"><span class="rank">3.</span><img src="img/RAMBO.png" class="avatar"><div class="player-info"><h4>R4MB0 <i class="fa-solid fa-bolt icon-accent"></i></h4><p>4-time EVO wins.</p></div></div>
+                </div>
+            </div>
+            <div class="player-column">
+                <h3 class="game-heading">FC 26</h3>
+                <div class="player-list">
+                    <div class="player-row"><span class="rank">1.</span><img src="img/cozons.png" class="avatar"><div class="player-info"><h4>COZONS2 <i class="fa-solid fa-globe icon-accent"></i></h4><p>FC Pro World Championship 25 1v1 Winner.</p></div></div>
+                    <div class="player-row"><span class="rank">2.</span><img src="img/Levi.webp" class="avatar"><div class="player-info"><h4>Levi de Weerd <i class="fa-solid fa-medal icon-accent"></i></h4><p>Won multiple LANs including the eDivisie.</p></div></div>
+                    <div class="player-row"><span class="rank">3.</span><img src="img/tekkz.jpg" class="avatar"><div class="player-info"><h4>Tekkz <i class="fa-solid fa-gem icon-accent"></i></h4><p>Three consecutive FUT Champions Cups.</p></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REVIEWS SECTION -->
+    <section class="review-section container">
+        <h2 class="section-title">REVIEW</h2>
+        <div class="carousel-container">
+            <button class="carousel-btn prev" onclick="moveReview(-1)"><i class="fa-solid fa-chevron-left"></i></button>
+            <div class="reviews-wrapper">
+                <div class="review-card">
+                    <img src="img/valo1.jpg" class="review-img">
+                    <p class="review-text">"A tactical shooter that's plenty deep. Balanced competitive setup."</p>
+                    <div class="reviewer-info"><div class="user-placeholder"><i class="fa-solid fa-user"></i></div><div><h5>MaxTatsu</h5><span>12 June 2025</span></div></div>
+                </div>
+                <div class="review-card active-card">
+                    <img src="img/tekken81.jpg" class="review-img">
+                    <p class="review-text">"Tekken 8 is an incredible evolution for the series, with tons of single-player content."</p>
+                    <div class="reviewer-info"><div class="user-placeholder"><i class="fa-solid fa-user"></i></div><div><h5>MonTatsu</h5><span>12 June 2025</span></div></div>
+                </div>
+                <div class="review-card">
+                    <img src="img/zlatan.webp" class="review-img">
+                    <p class="review-text">"EA Sports FC 26's on-pitch enhancements deliver a good gameplay loop."</p>
+                    <div class="reviewer-info"><div class="user-placeholder"><i class="fa-solid fa-user"></i></div><div><h5>NeoGamer</h5><span>12 June 2025</span></div></div>
+                </div>
+            </div>
+            <button class="carousel-btn next" onclick="moveReview(1)"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <!-- FOOTER WITH STRATEGIC APP RE-ROUTING -->
+    <footer>
+        <div class="footer-content container">
+            <h4>CONTACT US</h4>
+            <div class="social-icons">
+                <a href="https://youtube.com" target="_blank" class="social-icon youtube"><img src="img/youtube.png" alt="YouTube"></a>
+                <a href="https://facebook.com" target="_blank" class="social-icon facebook"><img src="img/facebook.png" alt="Facebook"></a>
+                <a href="https://tiktok.com" target="_blank" class="social-icon tiktok"><img src="img/tiktok.png" alt="TikTok"></a>
+                <!-- INTERACTIVE WHATSAPP INTEGRATION LINK -->
+                <a href="https://wa.me/1234567890?text=Hello%20UGA%20Esports!" target="_blank" class="social-icon whatsapp"><img src="img/whatsapp.png" alt="WhatsApp"></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FIXED: Proper JavaScript reference tag -->
+    <script src="js/script.js"></script>
+</body>
+</html>

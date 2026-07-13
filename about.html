@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - UGA Esports</title>
+    <link rel="stylesheet" href="css/style1.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="js/script.js">
+</head>
+<body>
+
+<!-- Force fixed background behavior directly inline -->
+<video autoplay muted loop playsinline id="bg-video" 
+       style="position: fixed; 
+              top: 0; 
+              left: 0; 
+              width: 100vw; 
+              height: 100vh; 
+              object-fit: cover; 
+              z-index: -9999; 
+              pointer-events: none; 
+              opacity: 0.35;">
+    <source src="img/fc26video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+	
+    <!-- HEADER / NAVIGATION -->
+    <header>
+        <div class="navbar container">
+            <div class="logo">
+                <span class="logo-text">UGA</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html" class="active">ABOUT US</a></li>
+                    <li><a href="schedule.html">SCHEDULE</a></li>
+                    <li><a href="services.html">SERVICES</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ABOUT US CONTENT SECTION -->
+    <main class="about-section container">
+        <h2 class="section-title">ABOUT US</h2>
+        
+        <!-- Image Box Frame with explicit Poster Asset -->
+        <div class="about-hero-container">
+            <img src="img/tekken8.png" alt="UGA Tri-Fight Showdown Banner" class="about-poster-img">
+        </div>
+
+        <!-- Description Box with spaced styling rules -->
+        <div class="about-description-box">
+            <div class="poster-text-details">
+                <span class="sub-badge">ULTIMATE GAMING ARENA</span>
+                <h1 class="main-event-title">THE TRI-FIGHT SHOWDOWN</h1>
+                <p class="games-featured">FC 26 • TEKKEN 8 • VALORANT</p>
+                <div class="event-meta">
+                    <span><i class="fa-solid fa-calendar-days"></i> OCTOBER 18-20, 2026</span>
+                    <span><i class="fa-solid fa-location-dot"></i> METRO ARENA</span>
+                </div>
+            </div>
+
+            <h3 class="description-title">Description</h3>
+            <p class="description-text">
+                Welcome to the Ultimate Gaming Arena (UGA), where competitive passion meets absolute excellence. As a premier esports organization, our mission is to provide an elite platform for players, creators, and fans to unite under the banner of high-stakes gaming infrastructure. 
+            </p>
+            <p class="description-text">
+                The Tri-Fight Showdown highlights our dedication to fostering top-tier competition across three monumental competitive ecosystems: the tactical precision of <strong>Valorant</strong>, the complex fighting mechanics of <strong>Tekken 8</strong>, and the refined strategic depth of <strong>FC 26</strong>. Through standardized tournaments, production graphics, and direct community engagement, UGA sets the new gold standard for competitive gaming arenas worldwide.
+            </p>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content container">
+            <h4>CONTACT US</h4>
+            <div class="social-icons">
+                <a href="https://youtube.com" target="_blank" class="social-icon youtube"><img src="img/youtube.png" alt="YouTube"></a>
+                <a href="https://facebook.com" target="_blank" class="social-icon facebook"><img src="img/facebook.png" alt="Facebook"></a>
+                <a href="https://tiktok.com" target="_blank" class="social-icon tiktok"><img src="img/tiktok.png" alt="TikTok"></a>
+                <!-- INTERACTIVE WHATSAPP INTEGRATION LINK -->
+                <a href="https://wa.me/1234567890?text=Hello%20UGA%20Esports!" target="_blank" class="social-icon whatsapp"><img src="img/whatsapp.png" alt="WhatsApp"></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

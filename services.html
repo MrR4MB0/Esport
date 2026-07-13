@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UGA Esports - Services</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- FontAwesome CDN for Service Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- VIDEO BACKGROUND OVERLAY -->
+    <video autoplay muted loop playsinline id="bg-video" 
+           style="position: fixed; 
+                  top: 0; 
+                  left: 0; 
+                  width: 100vw; 
+                  height: 100vh; 
+                  object-fit: cover; 
+                  z-index: -9999; 
+                  pointer-events: none; 
+                  opacity: 0.35;">
+        <source src="img/tekken8video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- HEADER / NAVIGATION -->
+    <header>
+        <div class="navbar container">
+            <div class="logo">
+                <span class="logo-text">UGA</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li><a href="schedule.html">SCHEDULE</a></li>
+                    <li><a href="services.html" class="active">SERVICES</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- SERVICES BANNER SECTION -->
+    <section class="hero-section container" style="margin-bottom: 40px;">
+        <div style="position: relative; width: 100%; height: 250px; overflow: hidden; border-radius: 12px; border: 1px solid #262c36;">
+            <img src="img/tekken81.jpg" alt="Services Banner" style="width: 100%; height: 100%; object-fit: cover; filter: hue-rotate(45deg) brightness(0.55);">
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; width: 100%;">
+                <h1 style="font-size: 3rem; font-family: sans-serif; letter-spacing: 4px; color: #fff; text-shadow: 0 0 15px rgba(0,240,255,0.6);">SERVICES</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE 6-CARD GRID PANEL -->
+    <section class="services-grid-section container" style="margin-bottom: 60px;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
+            
+            <!-- CARD 1 -->
+            <div class="game-card" style="background: var(--bg-card, #161920); border: 1px solid #262c36; border-radius: 12px; padding: 30px; text-align: center; transition: 0.3s;" onmouseenter="this.style.borderColor='var(--neon-blue)', this.style.transform='translateY(-5px)'" onmouseleave="this.style.borderColor='#262c36', this.style.transform='translateY(0)'">
+                <i class="fa-solid fa-trophy" style="font-size: 3rem; color: var(--neon-blue, #00f0ff); margin-bottom: 20px;"></i>
+                <h3 style="font-size: 1.4rem; margin-bottom: 15px; color: #fff;">Tournament Hosting</h3>
+                <p style="color: var(--text-muted, #a3a3a3); font-size: 0.9rem; line-height: 1.6;">Full-scale management for competitive esports events, including brackets, rulesets, and multi-game live-stream integration.</p>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="game-card" style="background: var(--bg-card, #161920); border: 1px solid #262c36; border-radius: 12px; padding: 30px; text-align: center; transition: 0.3s;" onmouseenter="this.style.borderColor='var(--neon-purple)', this.style.transform='translateY(-5px)'" onmouseleave="this.style.borderColor='#262c36', this.style.transform='translateY(0)'">
+                <i class="fa-solid fa-headset" style="font-size: 3rem; color: var(--neon-purple, #7000ff); margin-bottom: 20px;"></i>
+                <h3 style="font-size: 1.4rem; margin-bottom: 15px; color: #fff;">Pro Coaching</h3>
+                <p style="color: var(--text-muted, #a3a3a3); font-size: 0.9rem; line-height: 1.6;">1-on-1 and team training packages across major tactical shooters and fighting games to hone your strategic positioning and mechanical skills.</p>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="game-card" style="background: var(--bg-card, #161920); border: 1px solid #262c36; border-radius: 12px; padding: 30px; text-align: center; transition: 0.3s;" onmouseenter="this.style.borderColor='var(--neon-blue)', this.style.transform='translateY(-5px)'" onmouseleave="this.style.borderColor='#262c36', this.style.transform='translateY(0)'">
+                <i class="fa-solid fa-video" style="font-size: 3rem; color: var(--neon-blue, #00f0ff); margin-bottom: 20px;"></i>
+                <h3 style="font-size: 1.4rem; margin-bottom: 15px; color: #fff;">Broadcast Production</h3>
+                <p style="color: var(--text-muted, #a3a3a3); font-size: 0.9rem; line-height: 1.6;">High-production streaming solutions with cinematic overlay designs, real-time instant replays, and complete audio control desks.</p>
+            </div>
+
+            <!-- CARD 4 -->
+            <div class="game-card" style="background: var(--bg-card, #161920); border: 1px solid #262c36; border-radius: 12px; padding: 30px; text-align: center; transition: 0.3s;" onmouseenter="this.style.borderColor='var(--neon-purple)', this.style.transform='translateY(-5px)'" onmouseleave="this.style.borderColor='#262c36', this.style.transform='translateY(0)'">
+                <i class="fa-solid fa-building-shield" style="font-size: 3rem; color: var(--neon-purple, #7000ff); margin-bottom: 20px;"></i>
+                <h3 style="font-size: 1.4rem; margin-bottom: 15px; color: #fff;">Team Bootcamps</h3>
+                <p style="color: var(--text-muted, #a3a3a3); font-size: 0.9rem; line-height: 1.6;">Access to modern, fully equipped gaming arenas with ultra-fast gigabit networking and optimized hardware configurations.</p>
+            </div>
+
+            <!-- CARD 5 -->
+            <div class="game-card" style="background: var(--bg-card, #161920); border: 1px solid #262c36; border-radius: 12px; padding: 30px; text-align: center; transition: 0.3s;" onmouseenter="this.style.borderColor='var(--neon-blue)', this.style.transform='translateY(-5px)'" onmouseleave="this.style.borderColor='#262c36', this.style.transform='translateY(0)'">
+                <i class="fa-solid fa-wand-magic-sparkles" style="font-size: 3rem; color: var(--neon-blue, #00f0ff); margin-bottom: 20px;"></i>
+                <h3 style="font-size: 1.4rem; margin-bottom: 15px; color: #fff;">Graphic Assets</h3>
+                <p style="color: var(--text-muted, #a3a3a3); font-size: 0.9rem; line-height: 1.6;">Customized graphic assets optimized for organizations, covering animated stream packages, social banners, and professional logos.</p>
+            </div>
+
+            <!-- CARD 6 -->
+            <div class="game-card" style="background: var(--bg-card, #161920); border: 1px solid #262c36; border-radius: 12px; padding: 30px; text-align: center; transition: 0.3s;" onmouseenter="this.style.borderColor='var(--neon-purple)', this.style.transform='translateY(-5px)'" onmouseleave="this.style.borderColor='#262c36', this.style.transform='translateY(0)'">
+                <i class="fa-solid fa-handshake" style="font-size: 3rem; color: var(--neon-purple, #7000ff); margin-bottom: 20px;"></i>
+                <h3 style="font-size: 1.4rem; margin-bottom: 15px; color: #fff;">Sponsorships</h3>
+                <p style="color: var(--text-muted, #a3a3a3); font-size: 0.9rem; line-height: 1.6;">Connecting emerging creators and competitive team frames with global tech, peripheral, and clothing hardware brands.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER WITH STRATEGIC APP RE-ROUTING -->
+    <footer>
+        <div class="footer-content container">
+            <h4>CONTACT US</h4>
+            <div class="social-icons">
+                <a href="https://youtube.com" target="_blank" class="social-icon youtube"><img src="img/youtube.png" alt="YouTube"></a>
+                <a href="https://facebook.com" target="_blank" class="social-icon facebook"><img src="img/facebook.png" alt="Facebook"></a>
+                <a href="https://tiktok.com" target="_blank" class="social-icon tiktok"><img src="img/tiktok.png" alt="TikTok"></a>
+                <!-- INTERACTIVE WHATSAPP INTEGRATION LINK -->
+                <a href="https://wa.me/1234567890?text=Hello%20UGA%20Esports%20Services!" target="_blank" class="social-icon whatsapp"><img src="img/whatsapp.png" alt="WhatsApp"></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript links -->
+    <script src="js/script.js"></script>
+</body>
+</html>
